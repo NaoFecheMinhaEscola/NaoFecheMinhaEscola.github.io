@@ -1,14 +1,17 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: NÃO FECHEM minha ESCOLA
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hoje as ocupações de São Paulo são uma ferramenta na luta dos estudantes
+  contra a reorganização escolar. O movimento fex o governo recuar em certa
+  medida no projeto original, mas ainda assim quer fechar escolar, turnos e
+  remanejar ciclos. O movimento radicalizou para colocar o governo
+  contra a parede e derrubar definitivamente essa desorganização.
+disclaimer: >
+  Esse site é um site de apoio ao movimento dos alunos que estão ocupando as
+  escolas estaduais em todo o estado de São Paulo e pelo Brasil.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-
+url: "http://naofecheminhaescola.github.io" # the base hostname & protocol for your site
+facebook_page: "https://www.facebook.com/naofechemminhaescola/"
+facebook_username: "Não fechem minha escola"
 # Build settings
 markdown: kramdown
