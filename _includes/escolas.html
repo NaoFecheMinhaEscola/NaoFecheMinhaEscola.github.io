@@ -1,0 +1,816 @@
+<script type="text/javascript">
+escolas = [
+{
+    "name": "EE João Batista de Aquino",
+    "idx": 0,
+    "address": "R. Treze de Maio, 1380 - Vila Prof. Simoes, Agudos - SP, Brazil",
+    "lat": -22.4791162,
+    "lng": -48.98976109999999
+},
+{
+    "name": "EE Dr Clybas Pinto Ferraz ",
+    "idx": 1,
+    "address": "R. Santa Cecília, 709 - Vila Boa Vista, Assis - SP, 19806-051, Brazil",
+    "lat": -22.6560623,
+    "lng": -50.42193409999999
+},
+{
+    "name": "EE Ivani Maria Paes ",
+    "idx": 2,
+    "address": "R. Profa. Ivani Maria Paes, 21 - Jardim dos Camargos, Barueri - SP, Brazil",
+    "lat": -23.5025885,
+    "lng": -46.87022400000001
+},
+{
+    "name": "EE Ayrton Busch ",
+    "idx": 3,
+    "address": "R. Prof. Airton Busch, 14-41 - Parque Jaragua, Bauru - SP, 17066-590, Brazil",
+    "lat": -22.3074108,
+    "lng": -49.1090744
+},
+{
+    "name": "EE Ernesto Monte ",
+    "idx": 4,
+    "address": "R. Agenor Meira - Vila Noemy, Bauru - SP, 17014-460, Brazil",
+    "lat": -22.3309569,
+    "lng": -49.070951
+},
+{
+    "name": "EE Luiz Castanho de Almeida ",
+    "idx": 5,
+    "address": "Rua Campos Salles - Vila Falcao, Bauru - SP, Brazil",
+    "lat": -22.3239424,
+    "lng": -49.0925725
+},
+{
+    "name": "EE Stela Machado ",
+    "idx": 6,
+    "address": "Rua Wenceslau Braz, 1573 - Vila Pacifico, Bauru - SP, 17050-260, Brazil",
+    "lat": -22.324434,
+    "lng": -49.1001239
+},
+{
+    "name": "EE Mário Toledo ",
+    "idx": 7,
+    "address": "Acesso Provisorio, 1000 - Laranjeiras, Caieiras - SP, 07700-000, Brazil",
+    "lat": -23.3839462,
+    "lng": -46.7139787
+},
+{
+    "name": "EE Olindo Dartora ",
+    "idx": 8,
+    "address": "Av. Otávio Spigarolo, 183 - Vila Rosina, Caieiras - SP, Brazil",
+    "lat": -23.3830089,
+    "lng": -46.73755259999999
+},
+{
+    "name": "EE Antonio Vilela Junior ",
+    "idx": 9,
+    "address": "Rua Conselheiro Gomide, S/N - Vila Industrial, Campinas - SP, 13035-320, Brazil",
+    "lat": -22.9106085,
+    "lng": -47.06497900000001
+},
+{
+    "name": "EE Carlos Gomes ",
+    "idx": 10,
+    "address": "Av. Anchieta, 80 - Centro, Campinas - SP, 13015-101, Brazil",
+    "lat": -22.9021479,
+    "lng": -47.05735019999999
+},
+{
+    "name": "EE Francisco Glicério ",
+    "idx": 11,
+    "address": "Av. Dr. Moraes Sales, 988 - Centro, Campinas - SP, 13010-001, Brazil",
+    "lat": -22.9061194,
+    "lng": -47.0546727
+},
+{
+    "name": "EE Jamil Gadia ",
+    "idx": 12,
+    "address": "R. Sta Cruz das Palmeiras, 1290 - Parque da Figueira, Campinas - SP, 13040-084, Brazil",
+    "lat": -22.9479194,
+    "lng": -47.05892790000001
+},
+{
+    "name": "EE Julio de Mesquita ",
+    "idx": 13,
+    "address": "R. José Perina, 149 - Jardim Sao Vicente, Campinas - SP, 13045-185, Brazil",
+    "lat": -22.9463428,
+    "lng": -47.0242738
+},
+{
+    "name": "EE Reverendo Eliseu Narciso ",
+    "idx": 14,
+    "address": "189 - R. Sebastião de Campos, 117 - Dic III (Conjunto Hab. Ruy Novaes), Campinas - SP, 13054-233, Brazil",
+    "lat": -22.9780004,
+    "lng": -47.122631
+},
+{
+    "name": "EE Frei Dagoberto Romag",
+    "idx": 15,
+    "address": "R. José Valter Pachêco, 81 - Conj. Hab. Sao Jose, Campo Limpo Paulista - SP, 13232-263, Brazil",
+    "lat": -23.2115217,
+    "lng": -46.76053400000001
+},
+{
+    "name": "EE Rachid Jabur ",
+    "idx": 16,
+    "address": "Av. da Saudade, 193 - Centro, Cândido Mota - SP, 19880-000, Brazil",
+    "lat": -22.7408661,
+    "lng": -50.3915133
+},
+{
+    "name": "EE Diadema, antigo Cefam",
+    "idx": 17,
+    "address": "Rua Antônio Doll de Moraes, 75 - Centro, Diadema - SP, 09920-540, Brazil",
+    "lat": -23.6846,
+    "lng": -46.624384
+},
+{
+    "name": "EE Délcio de Souza Cunha ",
+    "idx": 18,
+    "address": "R. Hebert de Souza - Vila Iram, Diadema - SP, 09941-180, Brazil",
+    "lat": -23.6803626,
+    "lng": -46.6084188
+},
+{
+    "name": "EE Homero Silva ",
+    "idx": 19,
+    "address": "R. Nove de Julho, 335 - Canhema, Diadema - SP, 09941-380, Brazil",
+    "lat": -23.6766739,
+    "lng": -46.60319389999999
+},
+{
+    "name": "EE Ede Wilson Gonzaga ",
+    "idx": 20,
+    "address": "R. Gabão, 55 - Jardim Sao Luiz, Embu das Artes - SP, 06816-490, Brazil",
+    "lat": -23.6426171,
+    "lng": -46.81148880000001
+},
+{
+    "name": "EE Suely Machado Silva ",
+    "idx": 21,
+    "address": "R. Pôrto Velho, 1851 - Jardim Brasilandia I, Franca - SP, Brazil",
+    "lat": -20.5336501,
+    "lng": -47.3652183
+},
+{
+    "name": "EE Renê Rodrigues de Moraes ",
+    "idx": 22,
+    "address": "Rua Dr. Carlos Nehring, 165 - Jardim Helena Maria, Guarujá - SP, 11431-090, Brazil",
+    "lat": -23.99331819999999,
+    "lng": -46.27445240000001
+},
+{
+    "name": "EE Alayde Maria Vicente ",
+    "idx": 23,
+    "address": "R. Ida Richi, 100 - Jd Maria Alice, Guarulhos - SP, 07263-410, Brazil",
+    "lat": -23.4650561,
+    "lng": -46.3962862
+},
+{
+    "name": "EE Alice Chuery ",
+    "idx": 24,
+    "address": "R. Antônio Camargo, 130 - Jardim Sao Jorge, Guarulhos - SP, 07114-360, Brazil",
+    "lat": -23.4625081,
+    "lng": -46.52191759999999
+},
+{
+    "name": "EE Antônio Viana de Souza, ",
+    "idx": 25,
+    "address": "Rua Turim, 192 - Parque Jurema, Guarulhos - SP, 07244-023, Brazil",
+    "lat": -23.4447782,
+    "lng": -46.4116814
+},
+{
+    "name": "EE Conselheiro Crispiano ",
+    "idx": 26,
+    "address": "R. Iracema Ubirajara Celeste, 37 - Vila Progresso, Guarulhos - SP, 07095-200, Brazil",
+    "lat": -23.4613528,
+    "lng": -46.53470979999999
+},
+{
+    "name": "EE Vila Any ",
+    "idx": 27,
+    "address": "Rua Iara - Vila Any, Guarulhos - SP, Brazil",
+    "lat": -23.4775277,
+    "lng": -46.39617450000001
+},
+{
+    "name": "EE Maria de Lurdes Stipp Steffen ",
+    "idx": 28,
+    "address": "Rua Mestre Antônio Benedito Jesus, 174 - Jardim Marina, Indaiatuba - SP, 13343-560, Brazil",
+    "lat": -23.0994585,
+    "lng": -47.2074866
+},
+{
+    "name": "EE Dr Gaspar Ricardo Júnior ",
+    "idx": 29,
+    "address": "R. Santo Antônio, 186 - Centro, Iperó - SP, 18560-000, Brazil",
+    "lat": -23.3501123,
+    "lng": -47.68802489999999
+},
+{
+    "name": "EE Deputado João Dória ",
+    "idx": 30,
+    "address": "R. José Alves Irmão, 30 - Itaim Paulista, São Paulo - SP, 08140-000, Brazil",
+    "lat": -23.518844,
+    "lng": -46.387901
+},
+{
+    "name": "EE Roger Jules Carvalho Mange",
+    "idx": 32,
+    "address": "R. Estudantes da China, 570 - Itaim Paulista, São Paulo - SP, Brazil",
+    "lat": -23.5016844,
+    "lng": -46.3728424
+},
+{
+    "name": "EE Cicero Antonio de Sá Ramalho ",
+    "idx": 33,
+    "address": "R. Ferraz de Vasconcelos, 1000 - Vila Monte Belo, Itaquaquecetuba - SP, 08577-540, Brazil",
+    "lat": -23.4900163,
+    "lng": -46.37011639999999
+},
+{
+    "name": "EE Profa Josepha P Chiavelli ",
+    "idx": 34,
+    "address": "R. João Barbosa, 243 - Centro, Jandira - SP, 06600-070, Brazil",
+    "lat": -23.5309605,
+    "lng": -46.9002606
+},
+{
+    "name": "EE 21 de Abril ",
+    "idx": 38,
+    "address": "R. Rio Branco, 1134 - Centro, Lins - SP, 16400-086, Brazil",
+    "lat": -21.6783352,
+    "lng": -49.75799720000001
+},
+{
+    "name": "EEJosé Alfredo de Almeida ",
+    "idx": 39,
+    "address": "Av. Tomé de Souza, 5 - Jardim Continental, Marília - SP, 17524-119, Brazil",
+    "lat": -22.2411636,
+    "lng": -49.9311854
+},
+{
+    "name": "EE Monsenhor Bicudo ",
+    "idx": 40,
+    "address": "Av. Rio Branco, 803 - Sen. Salgado Filho, Marília - SP, Brazil",
+    "lat": -22.2230267,
+    "lng": -49.955757
+},
+{
+    "name": "EE Sylvia Ribeiro ",
+    "idx": 41,
+    "address": "R. Nair Rosilio Gutierrez - Nova Marilia, Marília - SP, Brazil",
+    "lat": -22.2545326,
+    "lng": -49.9313649
+},
+{
+    "name": "EE Maria Aparecida Damo ",
+    "idx": 43,
+    "address": "R. Rosa Bonini Mariani, 190 - Jardim Guapituba, Mauá - SP, Brazil",
+    "lat": -23.6905334,
+    "lng": -46.4531071
+},
+{
+    "name": "EE Maria Elena Colonia ",
+    "idx": 44,
+    "address": "R. Guadalajara, 135 - Parque das Americas, Mauá - SP, 09351-160, Brazil",
+    "lat": -23.6895789,
+    "lng": -46.443984
+},
+{
+    "name": "EE Marta Teresinha Rosa ",
+    "idx": 45,
+    "address": "Av. Itapark, 3763 - Jardim Itapark, Mauá - São Paulo, 09350-000, Brasil",
+    "lat": -23.6768498,
+    "lng": -46.43855440000001
+},
+{
+    "name": "EE Coronel Antonio Paiva de Sampaio ",
+    "idx": 46,
+    "address": "R. Ananias de Almeida, 145 - Quitaúna, Osasco - SP, 06186-190, Brazil",
+    "lat": -23.5339293,
+    "lng": -46.81111060000001
+},
+{
+    "name": "EE Francisca Peralta Lisboa ",
+    "idx": 47,
+    "address": "Av. Prof. Lourenço Filho, 560 - Jardim Elvira, Osasco - SP, 06243-000, Brazil",
+    "lat": -23.50360719999999,
+    "lng": -46.7944384
+},
+{
+    "name": "EE Heloísa Assumpção ",
+    "idx": 48,
+    "address": "Escola Estadual Professora Heloisa de Assumpção - Av. Cmte. Sampaio, 1399 - Km 18, Osasco - SP, 06192-010, Brazil",
+    "lat": -23.525243,
+    "lng": -46.8052459
+},
+{
+    "name": "EE Leonardo Villas Boas ",
+    "idx": 49,
+    "address": "Av. José Barbosa de Siqueira, 71 - Padroeira, Osasco - SP, 06172-000, Brazil",
+    "lat": -23.554919,
+    "lng": -46.80242260000001
+},
+{
+    "name": "EE Antônio de Mello Cotrim ",
+    "idx": 51,
+    "address": "Rua Dona Stella, 65 - Paulicéia, Piracicaba - SP, Brazil",
+    "lat": -22.7515032,
+    "lng": -47.6513023
+},
+{
+    "name": "EE Barão do Rio Branco ",
+    "idx": 52,
+    "address": "R. Ipiranga, 924 - Centro, Piracicaba - SP, 13400-485, Brazil",
+    "lat": -22.7305399,
+    "lng": -47.6499804
+},
+{
+    "name": "EE Jethro Vaz de Toledo ",
+    "idx": 53,
+    "address": "R. Garça, 535 - Jd Itapua, Piracicaba - SP, 13402-055, Brazil",
+    "lat": -22.7566456,
+    "lng": -47.66332269999999
+},
+{
+    "name": "EE Profa Nanci Cristina do Espirito Santo ",
+    "idx": 54,
+    "address": "Rua Fernando de Noronha, 100 - JD Santa Helena, Poá - SP, 08553-700, Brazil",
+    "lat": -23.5206689,
+    "lng": -46.3584396
+},
+{
+    "name": "EE Alvaro de Souza Vieira ",
+    "idx": 55,
+    "address": "Av. Princesa Isabel, 484 - Vl Gomes, Ribeirão Pires - SP, 09403-100, Brazil",
+    "lat": -23.6949657,
+    "lng": -46.4316165
+},
+{
+    "name": "EE Otília de Paula Leite ",
+    "idx": 58,
+    "address": "R. África, 51 - Jd Elizabeth, Salto - SP, 13326-090, Brazil",
+    "lat": -23.1944919,
+    "lng": -47.3092169
+},
+{
+    "name": "EE Irene Assis Saes ",
+    "idx": 60,
+    "address": "R. Tupininquins, 195 - Jardim Sao Francisco, Santa Bárbara D'Oeste - SP, Brazil",
+    "lat": -22.7671924,
+    "lng": -47.39398980000001
+},
+{
+    "name": "EE Prefeito Mario Avesani ",
+    "idx": 61,
+    "address": "R. Manoel Valério, 139 - V.S.TEREZINHA, Santa Cruz das Palmeiras - SP, 13650-000, Brazil",
+    "lat": -21.8240253,
+    "lng": -47.2483008
+},
+{
+    "name": "EE Maria Petrolina ",
+    "idx": 62,
+    "address": "Av. Mario Lopes Leão, 1050 - Santo Amaro, São Paulo - SP, 04754-010, Brazil",
+    "lat": -23.6513354,
+    "lng": -46.7155893
+},
+{
+    "name": "EE Prof Alberto Conte ",
+    "idx": 63,
+    "address": "Av. Mario Lopes Leão, 120 - Santo Amaro, São Paulo - SP, 04754-010, Brazil",
+    "lat": -23.649906,
+    "lng": -46.707152
+},
+{
+    "name": "EE 16 de Julho ",
+    "idx": 65,
+    "address": "R. Gen. Olímpio Mourão Filho - Centreville, Santo André - SP, 09120-160, Brazil",
+    "lat": -23.678473,
+    "lng": -46.49430900000001
+},
+{
+    "name": "EE Antônio Adib Chammas ",
+    "idx": 67,
+    "address": "R. Prof. Oliveira Campos, 230 - Jardim S Cristina, Santo André - SP, Brazil",
+    "lat": -23.6985986,
+    "lng": -46.51351649999999
+},
+{
+    "name": "EE Dr Américo Brasiliense ",
+    "idx": 68,
+    "address": "Praça IV Centenário, 7 - Centro, Santo André - SP, 09015-080, Brazil",
+    "lat": -23.655594,
+    "lng": -46.5308269
+},
+{
+    "name": "EE Parque Marajoara II ",
+    "idx": 69,
+    "address": "R. Rogerio Giorgi - Parque Marajoara, Santo André - SP, 09112-130, Brazil",
+    "lat": -23.667457,
+    "lng": -46.4915639
+},
+{
+    "name": "EE Prof José Augusto de Azevedo Antunes ",
+    "idx": 70,
+    "address": "R. Tatuí, 397 - Casa Branca, Santo André - SP, 09015-620, Brazil",
+    "lat": -23.6615529,
+    "lng": -46.51881290000001
+},
+{
+    "name": "EE Professor Nelson Pizzotti Mendes ",
+    "idx": 71,
+    "address": "R. José de Alençar, 75 - Jardim Carla, Santo André - SP, 09131-250, Brazil",
+    "lat": -23.6933187,
+    "lng": -46.4941589
+},
+{
+    "name": "EE Senador João Galeão Carvalhal ",
+    "idx": 72,
+    "address": "R. do Bosque, 64 - Vila Bastos, Santo André - SP, 09040-280, Brazil",
+    "lat": -23.661725,
+    "lng": -46.536347
+},
+{
+    "name": "EE Valdomiro Silveira ",
+    "idx": 73,
+    "address": "R. Agostinho de Campos, 80 - Jardim Silvana, Santo André - SP, Brazil",
+    "lat": -23.6853445,
+    "lng": -46.49839679999999
+},
+{
+    "name": "EE Wanda Bento Gonçalves ",
+    "idx": 74,
+    "address": "R. Petrogrado - Jardim Santo Alberto, Santo André - SP, 09260-450, Brazil",
+    "lat": -23.6349008,
+    "lng": -46.4920402
+},
+{
+    "name": "EE Azevedo Junior ",
+    "idx": 75,
+    "address": "R. Dom Pedro II, 50 - Vila Belmiro, Santos - SP, Brazil",
+    "lat": -23.9349062,
+    "lng": -46.3287305
+},
+{
+    "name": "EE Prof Cleóbulos Amazonas Duarte ",
+    "idx": 76,
+    "address": "R. Dr. Guedes Coelho, 107 - Encruzilhada, Santos - SP, 11050-231, Brazil",
+    "lat": -23.9536944,
+    "lng": -46.32703309999999
+},
+{
+    "name": "EE Bruno Pieroni ",
+    "idx": 77,
+    "address": "R. Luís Oberst Escudeiro, 240 - Jd Sumare, Sertãozinho - SP, 14170-510, Brazil",
+    "lat": -21.1428271,
+    "lng": -47.9891639
+},
+{
+    "name": "EE Antonio Padilha ",
+    "idx": 78,
+    "address": "R. Prof. Tolêdo - Centro, Sorocaba - SP, 18035-110, Brazil",
+    "lat": -23.502325,
+    "lng": -47.4621009
+},
+{
+    "name": "EE Antonio Vieira ",
+    "idx": 79,
+    "address": "Av. Dr. Américo Figueiredo, 3272 - Coj. Hab. Júlio de M. Filho, Sorocaba - SP, 18053-000, Brazil",
+    "lat": -23.5042565,
+    "lng": -47.5142142
+},
+{
+    "name": "EE Dr Julio Prestes de Albuquerque ",
+    "idx": 81,
+    "address": "Av. Eugênio Salerno, 204 - Centro, Sorocaba - SP, 18035-430, Brazil",
+    "lat": -23.5004083,
+    "lng": -47.4680292
+},
+{
+    "name": "EE Guiomar Camolesi de Souza",
+    "idx": 82,
+    "address": "R. Itália Biglia Massari, 40 - Jardim Maria Eugenia, Sorocaba - SP, 18074-460, Brazil",
+    "lat": -23.4569142,
+    "lng": -47.49147169999999
+},
+{
+    "name": "EE Helio del Cistia ",
+    "idx": 83,
+    "address": "Rua Aristides de Barros, 150 - Jardim Sao Guilherme, Sorocaba - SP, Brazil",
+    "lat": -23.4490849,
+    "lng": -47.4870944
+},
+{
+    "name": "EE Humberto de Campus ",
+    "idx": 84,
+    "address": "Escola Estadual Humberto de Campos - R. Humberto de Campos, 541 - Jardim Zulmira, Sorocaba - SP, 18061-000, Brazil",
+    "lat": -23.500618,
+    "lng": -47.482388
+},
+{
+    "name": "EE João Rodrigues Bueno ",
+    "idx": 85,
+    "address": "R. Valderez Camargo Curto, 220 - Vila Carol, Sorocaba - SP, Brazil",
+    "lat": -23.4708691,
+    "lng": -47.4795212
+},
+{
+    "name": "EE Lauro Sanches ",
+    "idx": 86,
+    "address": "R. Arnaldo Cunha, 237 - Vl Carol, Sorocaba - SP, 18075-240, Brazil",
+    "lat": -23.4758962,
+    "lng": -47.47510020000001
+},
+{
+    "name": "EE Mario Guilherme Notari ",
+    "idx": 87,
+    "address": "Rua Ida Caldini, 286 - JD Luciana Maria, Sorocaba - SP, 18071-370, Brazil",
+    "lat": -23.46872179999999,
+    "lng": -47.5089328
+},
+{
+    "name": "EE Professor Antônio Cordeiro ",
+    "idx": 88,
+    "address": "R. Maria Mte. Rosa, s/n - Parque das Laranjeiras, SP, 18077-400, Brazil",
+    "lat": -23.4536743,
+    "lng": -47.4749279
+},
+{
+    "name": "EE Professor Genésio Machado ",
+    "idx": 89,
+    "address": "R. Miguel Sutil - Vila Santana, Sorocaba - SP, 18080-763, Brazil",
+    "lat": -23.4883666,
+    "lng": -47.4572324
+},
+{
+    "name": "EE Professor Jorge Madureira ",
+    "idx": 90,
+    "address": "R. Geraldo Ribeiro Duarte, 736 - Parque das Laranjeiras, Sorocaba - SP, 18077-381, Brazil",
+    "lat": -23.454389,
+    "lng": -47.47001489999999
+},
+{
+    "name": "EE Professor Rafael Orsi Filho ",
+    "idx": 91,
+    "address": "R. Orsini Diniz Camargo, 165 - Conjunto Habitacional Júlio de Mesquita Filho, Sorocaba - SP, 18053-081, Brazil",
+    "lat": -23.506961,
+    "lng": -47.5100089
+},
+{
+    "name": "EE Professor Roque Conceição Martins ",
+    "idx": 92,
+    "address": "R. Malaky Murad, 26 - Jardim Guadalupe, Sorocaba - SP, Brazil",
+    "lat": -23.4640022,
+    "lng": -47.4646689
+},
+{
+    "name": "EE Professora Elza Salvestro Bonilha ",
+    "idx": 93,
+    "address": "R. Arlinda Almeida dos Santos, 414 - Jd Itangua, Sorocaba - SP, 18056-190, Brazil",
+    "lat": -23.5041739,
+    "lng": -47.50250399999999
+},
+{
+    "name": "EE Senador Vergueiro ",
+    "idx": 94,
+    "address": "R. Fernão Sales, 33 - Vila Hortência, Sorocaba - SP, 18020-266, Brazil",
+    "lat": -23.5031639,
+    "lng": -47.44555889999999
+},
+{
+    "name": "EE Tito Lima ",
+    "idx": 95,
+    "address": "R. Sagres, 127 - Estoril, São Bernardo do Campo - SP, Brazil",
+    "lat": -23.7759531,
+    "lng": -46.52204649999999
+},
+{
+    "name": "EE Arlindo Bittencourt ",
+    "idx": 96,
+    "address": "R. Silvério Ignarra Sobrinho, 455 - Vila Monteiro, São Carlos - SP, 13573-284, Brazil",
+    "lat": -22.0254929,
+    "lng": -47.8850805
+},
+{
+    "name": "EE Jesuíno de Arruda ",
+    "idx": 97,
+    "address": "-132 - R. dos Ferroviários, 74 - Vila Prado, São Carlos - SP, Brazil",
+    "lat": -22.0350584,
+    "lng": -47.8922141
+},
+{
+    "name": "EE Major Miguel Naked ",
+    "idx": 98,
+    "address": "Av. Benedito Bento, 195 - Cidade Morumbi, São José dos Campos - SP, 12236-580, Brazil",
+    "lat": -23.2504658,
+    "lng": -45.9052157
+},
+{
+    "name": "EE Moabe Cury ",
+    "idx": 99,
+    "address": "Rua Díonísio Alves da Silva, 101 - Conj. Res. Elmano Veloso, São José dos Campos - SP, 12234-701, Brazil",
+    "lat": -23.2788401,
+    "lng": -45.89346520000001
+},
+{
+    "name": "EE Caetano de Campos ",
+    "idx": 100,
+    "address": "R. João Guimarães Rosa, 111 - Consolação, São Paulo - SP, 01303-030, Brazil",
+    "lat": -23.5495687,
+    "lng": -46.64719359999999
+},
+{
+    "name": "EE Emiliano Augusto Cavalcanti de Albuquerque E Melo ",
+    "idx": 101,
+    "address": "Av. Diógenes Ribeiro de Lima, 2001 - Alto Pinheiros, São Paulo - SP, 05458-001, Brazil",
+    "lat": -23.5430862,
+    "lng": -46.7169204
+},
+{
+    "name": "EE Maria José ",
+    "idx": 103,
+    "address": "R. Treze de Maio, 267 - Bela Vista, São Paulo - SP, 01327-000, Brazil",
+    "lat": -23.5558445,
+    "lng": -46.6466006
+},
+{
+    "name": "EE Egídio Damy ",
+    "idx": 104,
+    "address": "R. Paulo García Aquiline, 406 - Brasilândia, São Paulo - SP, 02844-120, Brazil",
+    "lat": -23.469761,
+    "lng": -46.6864059
+},
+{
+    "name": "EE Professor Emygdio de Barros ",
+    "idx": 105,
+    "address": "Av. Nossa Sra. da Assunção, 230 - Jardim Bonfiglioli, São Paulo - SP, Brazil",
+    "lat": -23.57396749999999,
+    "lng": -46.74214359999999
+},
+{
+    "name": "EE Virgilia Rodrigues Alves de Carvalho Pinto ",
+    "idx": 106,
+    "address": "Rua Domingos Barbieri, 350 - Jardim Previdência, São Paulo - SP, 05531-060, Brazil",
+    "lat": -23.5765069,
+    "lng": -46.7204504
+},
+{
+    "name": "EE Capitão Amaral ",
+    "idx": 108,
+    "address": "Rua Núrsia, 412 - Jardim Sao Bento, São Paulo - SP, Brazil",
+    "lat": -23.5026837,
+    "lng": -46.6506305
+},
+{
+    "name": "EE Padre Sabóia de Medeiros ",
+    "idx": 110,
+    "address": "R. Américo Brasiliense, 1297 - Chácara Santo Antônio, São Paulo - SP, 04715-003, Brazil",
+    "lat": -23.6330702,
+    "lng": -46.69964609999999
+},
+{
+    "name": "EE Caetano de Campos ",
+    "idx": 112,
+    "address": "R. João Guimarães Rosa, 111 - Consolação, São Paulo - SP, 01303-030, Brazil",
+    "lat": -23.5495687,
+    "lng": -46.64719359999999
+},
+{
+    "name": "EE Souza Penna ",
+    "idx": 114,
+    "address": "Av. Afonso Pena, 257 - Macuco, Santos - SP, 11020-001, Brazil",
+    "lat": -23.9633247,
+    "lng": -46.3132296
+},
+{
+    "name": "EE Joaquim Leme do Prado ",
+    "idx": 115,
+    "address": "E.E. Joaquim Leme do Prado - Av. Imirim, 2113 - Imirim, São Paulo - SP, 02465-200, Brazil",
+    "lat": -23.4882204,
+    "lng": -46.6522797
+},
+{
+    "name": "EE Comendador Vianello Gregório ",
+    "idx": 117,
+    "address": "Rua Felipe de Veras, s/n - Jardim Vergueiro, São Paulo - SP, 05818-260, Brazil",
+    "lat": -23.6651606,
+    "lng": -46.73109209999999
+},
+{
+    "name": "EE Professor Ciridião Buarque ",
+    "idx": 129,
+    "address": "R. Cerro Corá, 770 - Vl. Ipojuca, São Paulo - SP, 05061-100, Brazil",
+    "lat": -23.5401453,
+    "lng": -46.70465950000001
+},
+{
+    "name": "EE João Kopke ",
+    "idx": 130,
+    "address": "Alameda Cleveland, 331 - Campos Elíseos, São Paulo - SP, 01218-000, Brazil",
+    "lat": -23.53248439999999,
+    "lng": -46.64198390000001
+},
+{
+    "name": "EE Antônio Firmino de Proença ",
+    "idx": 131,
+    "address": "R. da Mooca, 363 - Mooca, São Paulo - SP, Brazil",
+    "lat": -23.5534993,
+    "lng": -46.6214361
+},
+{
+    "name": "EE Adelaide Rosa",
+    "idx": 132,
+    "address": "E.E. Adelaide Rosa Fernandes Machado de Souza - Av. Dona Belmira Marin, 3312 - Parque Brasil, São Paulo - SP, Brazil",
+    "lat": -23.7528469,
+    "lng": -46.683811
+},
+{
+    "name": "EE Gavião Peixoto ",
+    "idx": 133,
+    "address": "R. Mogeiro, 710 - Vila Perus, São Paulo - SP, 05206-240, Brazil",
+    "lat": -23.4046615,
+    "lng": -46.7594191
+},
+{
+    "name": "EE Fernão Dias Paes ",
+    "idx": 134,
+    "address": "Av. Pedroso de Morais, 420 - Pinheiros, São Paulo - SP, 05420-000, Brazil",
+    "lat": -23.5656255,
+    "lng": -46.68965850000001
+},
+{
+    "name": "EE Godofredo Furtado ",
+    "idx": 135,
+    "address": "Rua João Moura, 727 - Pinheiros, São Paulo - SP, 05412-001, Brazil",
+    "lat": -23.5593035,
+    "lng": -46.67886159999999
+},
+{
+    "name": "EE Sílvio Xavier Antunes ",
+    "idx": 136,
+    "address": "150 - Piqueri, São Paulo - SP, 02913-080, Brazil",
+    "lat": -23.5018341,
+    "lng": -46.7132794
+},
+{
+    "name": "EE João XXIII ",
+    "idx": 140,
+    "address": "R. Cônego Luís Viêira da Silva, 201 - Jardim Joao XXIII, São Paulo - SP, 05569-110, Brazil",
+    "lat": -23.5981424,
+    "lng": -46.7920946
+},
+{
+    "name": "EE Arthur Chagas ",
+    "idx": 142,
+    "address": "R. Francesco Usper, 951 - CJ Hab T Vilela, São Paulo - SP, 03928-235, Brazil",
+    "lat": -23.60435949999999,
+    "lng": -46.49641679999999
+},
+{
+    "name": "EE Professor Dr Décio Ferraz Alvim ",
+    "idx": 143,
+    "address": "R. Edmundo da Cunha, 16311 - Jardim Rodolfo Pirani, São Paulo - SP, 08330-180, Brazil",
+    "lat": -23.6207329,
+    "lng": -46.462633
+},
+{
+    "name": "EE Sapopemba",
+    "idx": 144,
+    "address": "R. Sen. Nilo Coelho, 690 - Jardim Sapopemba, São Paulo - SP, 03929-100, Brazil",
+    "lat": -23.6054791,
+    "lng": -46.4907073
+},
+{
+    "name": "EE Astrogildo Arruda ",
+    "idx": 145,
+    "address": "R. Domingos do Sacramento, 275 - Vila Carolina, São Paulo - SP, Brazil",
+    "lat": -23.5061037,
+    "lng": -46.445936
+},
+{
+    "name": "EE Shinquichi Agari ",
+    "idx": 146,
+    "address": "R. João Maxímiano Mafra, 351 - Vila Curuca, São Paulo - SP, 08030-350, Brazil",
+    "lat": -23.5013996,
+    "lng": -46.4215117
+},
+{
+    "name": "EE Domingos Mignoni ",
+    "idx": 166,
+    "address": "R. Jovina de Carvalho Dau, 150 - Parque Santos Dumont, Taboão da Serra - SP, 06754-200, Brazil",
+    "lat": -23.60677,
+    "lng": -46.756527
+},
+{
+    "name": "EE Selma Maria Martins Cunha ",
+    "idx": 169,
+    "address": "Rua Adão Martins, 530, Votorantim - SP, Brazil",
+    "lat": -23.544014,
+    "lng": -47.49604799999999
+}
+]
+</script>

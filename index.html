@@ -1,23 +1,68 @@
 ---
 layout: default
 ---
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+<script type="text/javascript" src="http://hpneo.github.io/gmaps/gmaps.js"></script>
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <h1 class="page-heading">Mapa das Escolas</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <style type="text/css">
+#map {
+    width: 100%;
+    height: 400px;
+}
+    </style>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div id="map"></div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    {% include escolas.html %}
+
+
+    <script type="text/javascript">
+var map;
+$(document).ready(function(){
+    map = new GMaps({
+        el: '#map',
+        lat: -23.6302722,
+        lng: -46.7649456,
+        zoom: 9,
+        zoomControl : true,
+        zoomControlOpt: {
+            style : "SMALL",
+            position: "TOP_LEFT"
+        },
+        panControl : true,
+    });
+    for (i=0, len = escolas.length; i<len; i++) {
+        map.addMarker({
+            lat: escolas[i].lat,
+            lng: escolas[i].lng,
+            title: escolas[i].name,
+            infoWindow: {
+                content: "<p>" + escolas[i].name + "</p><small>" + escolas[i].address + "</small>"
+            }
+        });
+    }
+});
+    </script>
+
+    <h1 class="page-heading">Últimas notícias</h1>
+
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
